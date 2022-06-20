@@ -1,6 +1,6 @@
 ﻿namespace Avanade.Academia.PcD.Domain.Entities
 {
-    public class BaseEntity
+    public abstract class BaseEntity
     {
         protected BaseEntity(
             DateTime dataAtualizacao)

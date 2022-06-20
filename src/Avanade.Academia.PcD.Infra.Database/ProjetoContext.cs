@@ -12,7 +12,7 @@ namespace Avanade.Academia.PcD.Infra.Database
         //}
 
         public DbSet<Professor> Professores { get; set; }
-        //public DbSet<Curso> Cursos { get; set; }
+        public DbSet<Curso> Cursos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         { 
@@ -27,6 +27,7 @@ namespace Avanade.Academia.PcD.Infra.Database
             //new ProfessorEntityTypeConfiguration().Configure(modelBuilder.Entity<Professor>());
 
             modelBuilder.ApplyConfiguration(new ProfessorEntityTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new CursoEntityTypeConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

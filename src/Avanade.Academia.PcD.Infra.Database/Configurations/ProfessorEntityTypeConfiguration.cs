@@ -8,7 +8,7 @@ namespace Avanade.Academia.PcD.Infra.Database.Configurations
     {
         public void Configure(EntityTypeBuilder<Professor> builder)
         {
-            builder.ToTable("TblProfessor");
+            builder.ToTable("Professores");
 
             builder
                 .Property(x => x.Nome)
